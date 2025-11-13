@@ -4,20 +4,21 @@ import { Button } from "@/components/ui/button";
 export default function Home() {
   return (
     <main className="min-h-screen bg-gogol-bg text-foreground">
+
+      <div className="relative overflow-hidden bg-gogol-bg text-foreground">
+        {/* Corner ornament */}
+        <img
+          src="/corner-top-right.png"
+          className="pointer-events-none absolute top-0 right-0 w-[380px] md:w-[500px] opacity-90 select-none"
+          alt=""
+        />
+
       {/* HERO */}
       <section className="relative px-6 py-28 md:py-36 overflow-hidden">
         {/* Background effects */}
         <div className="pointer-events-none absolute inset-0 bg-gogol-grid opacity-15" />
         <div className="pointer-events-none absolute inset-0 bg-gogol-radial" />
         <div className="pointer-events-none absolute inset-0 bg-gogol-radial-purple" />
-        {/* Corner accent */}
-        <div className="pointer-events-none absolute -top-12 -right-10 opacity-70">
-          <img
-            src="/gogol-corner.svg"
-            alt=""
-            className="h-56 w-56 md:h-72 md:w-72"
-          />
-        </div>
         <div className="max-w-5xl mx-auto text-center relative">
           <div className="mb-5 text-sm tracking-widest uppercase text-muted-foreground">Gogols.ai</div>
           <h1 className="text-4xl md:text-6xl font-semibold leading-tight">
@@ -103,6 +104,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      </div>
+
     </main>
   );
 }
