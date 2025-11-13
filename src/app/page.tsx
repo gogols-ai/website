@@ -1,65 +1,108 @@
-import Image from "next/image";
+// app/page.tsx
+import { Button } from "@/components/ui/button";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <main className="min-h-screen bg-gogol-bg text-foreground">
+      {/* HERO */}
+      <section className="relative px-6 py-28 md:py-36 overflow-hidden">
+        {/* Background effects */}
+        <div className="pointer-events-none absolute inset-0 bg-gogol-grid opacity-15" />
+        <div className="pointer-events-none absolute inset-0 bg-gogol-radial" />
+        <div className="pointer-events-none absolute inset-0 bg-gogol-radial-purple" />
+        {/* Corner accent */}
+        <div className="pointer-events-none absolute -top-12 -right-10 opacity-70">
+          <img
+            src="/gogol-corner.svg"
+            alt=""
+            className="h-56 w-56 md:h-72 md:w-72"
+          />
+        </div>
+        <div className="max-w-5xl mx-auto text-center relative">
+          <div className="mb-5 text-sm tracking-widest uppercase text-muted-foreground">Gogols.ai</div>
+          <h1 className="text-4xl md:text-6xl font-semibold leading-tight">
+            Meet your <span className="text-gogol-cyan">Gogol</span>.
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+          <p className="mt-5 text-muted-foreground md:text-lg">
+            Specialized AI agents — digital souls that learn your world and act on your behalf.
           </p>
+          <div className="mt-8 flex items-center justify-center gap-3">
+            <Button className="h-11 px-6 text-base">Train a Gogol</Button>
+            <Button variant="outline" className="h-11 px-6 text-base">
+              Watch demo
+            </Button>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      {/* TRAIN */}
+      <section id="train" className="px-6 py-16 md:py-24 border-t border-border">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+          <div>
+            <h2 className="text-3xl md:text-4xl font-semibold">Train a Gogol in minutes</h2>
+            <p className="mt-3 text-muted-foreground">
+              Connect your site or upload docs. Our engine ingests your knowledge and forms an interactive AI soul — your Gogol.
+              Embed it as a chat widget, API, or autonomous agent.
+            </p>
+            <ul className="mt-6 space-y-2 text-muted-foreground">
+              <li>1️⃣ Ingest → 2️⃣ Train → 3️⃣ Deploy</li>
+              <li>Widget, API, or room-bot via Ethora</li>
+              <li>Private by default; shareable with "selective reveal"</li>
+            </ul>
+            <div className="mt-6">
+              <Button className="h-11 px-6">Launch the Trainer</Button>
+            </div>
+          </div>
+          <div className="rounded-2xl border border-border p-6 bg-gogol-surface/40">
+            <div className="h-56 rounded-lg border border-border bg-[linear-gradient(120deg,_rgba(168,85,247,0.12),_rgba(6,182,212,0.12))] flex items-center justify-center">
+              <span className="text-muted-foreground">[ Demo video placeholder ]</span>
+            </div>
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+
+      {/* EXPERIENCE */}
+      <section id="experience" className="px-6 py-16 md:py-24 border-t border-border">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-semibold">Experience the Gogolverse</h2>
+          <p className="mt-3 text-muted-foreground">Chat with digital twins, try business gogols, or play the Dilemma game.</p>
+          <div className="mt-8 grid gap-6 md:grid-cols-3">
+            {["Freud Gogol","Business Gogol","Dilemma Gogol"].map((t) => (
+              <div key={t} className="rounded-xl border border-border p-5 bg-gogol-surface/40">
+                <div className="h-36 rounded-md border border-border mb-4 bg-card/60"/>
+                <div className="font-medium">{t}</div>
+                <p className="text-sm text-muted-foreground mt-1">Open a chat demo in a modal.</p>
+                <div className="mt-4">
+                  <Button variant="outline" className="w-full">Try demo</Button>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SERVICES */}
+      <section id="services" className="px-6 py-16 md:py-24 border-t border-border">
+        <div className="max-w-5xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-semibold">Human + AI consultancy</h2>
+          <p className="mt-3 text-muted-foreground">
+            Our engineers and gogols co-design intelligent workflows, RAG assistants, and digital twins for your org.
+          </p>
+          <div className="mt-6">
+            <Button className="h-11 px-6">Book a call</Button>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="px-6 py-20 border-t border-border">
+        <div className="max-w-4xl mx-auto text-center">
+          <h3 className="text-2xl md:text-3xl font-semibold">Don't just use AI. Create a soul.</h3>
+          <div className="mt-6 flex justify-center">
+            <Button className="h-11 px-6">Train your Gogol</Button>
+          </div>
+        </div>
+      </section>
+    </main>
   );
 }

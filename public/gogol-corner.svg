@@ -1,0 +1,31 @@
+<svg width="320" height="320" viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+      gradientTransform="translate(260 40) rotate(135) scale(220)">
+      <stop stop-color="#22D3EE" stop-opacity="0.9"/>
+      <stop offset="0.4" stop-color="#A855F7" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#020617" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="stroke" x1="40" y1="260" x2="260" y2="40" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#22D3EE"/>
+      <stop offset="0.5" stop-color="#A855F7"/>
+      <stop offset="1" stop-color="#22D3EE"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Glow blob -->
+  <circle cx="260" cy="40" r="220" fill="url(#glow)"/>
+
+  <!-- Circuit-mask shape -->
+  <path d="M80 250 C80 180 110 140 130 120 C150 100 170 80 170 60 C170 42 183 30 200 30
+           C217 30 230 42 230 60 C230 84 220 103 208 120 C196 138 190 150 190 180
+           C190 210 210 230 230 250" 
+        fill="none" stroke="url(#stroke)" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Small “nodes” -->
+  <circle cx="170" cy="60" r="3" fill="#22D3EE"/>
+  <circle cx="200" cy="30" r="3" fill="#A855F7"/>
+  <circle cx="208" cy="120" r="3" fill="#22D3EE"/>
+  <circle cx="190" cy="180" r="3" fill="#A855F7"/>
+  <circle cx="230" cy="250" r="3" fill="#22D3EE"/>
+</svg>
