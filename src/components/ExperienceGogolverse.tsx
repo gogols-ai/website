@@ -9,18 +9,21 @@ const peopleGogols = [
     title: "Freud Gogol",
     subtitle: "Psychoanalytic twin",
     description: "Explore dreams, symbols, and subconscious motives.",
+    image: "/avatars/freud-gogol.png",
   },
   {
     id: "gandhi",
     title: "Gandhi Gogol",
     subtitle: "Ethics & non-violence",
     description: "Debate moral dilemmas and peaceful strategies.",
+    image: "/avatars/gandhi-gogol.png",
   },
   {
     id: "zelensky",
     title: "Zelensky Gogol",
     subtitle: "Leadership in crisis",
     description: "Discuss communication, courage, and wartime decisions.",
+    image: "/avatars/zelensky-gogol.png",
   },
 ];
 
@@ -157,6 +160,7 @@ type TileItem = {
   title: string;
   subtitle: string;
   description: string;
+  image?: string;
 };
 
 function Tile({
@@ -181,7 +185,15 @@ function Tile({
         <div key={item.id} className="cyber-swap">
           <div className="h-32 mb-4 rounded-xl border border-border bg-card/60 flex items-center justify-center text-sm text-muted-foreground relative overflow-hidden">
             <div className="absolute inset-0 bg-gogol-grid opacity-15 pointer-events-none" />
-            <span className="relative z-10">{item.title}</span>
+            {item.image ? (
+              <img
+                src={item.image}
+                alt={item.title}
+                className="relative z-10 w-full h-full object-cover rounded-xl"
+              />
+            ) : (
+              <span className="relative z-10">{item.title}</span>
+            )}
           </div>
           <div className="font-medium">{item.subtitle}</div>
           <p className="text-sm text-muted-foreground mt-1">{item.description}</p>
