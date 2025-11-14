@@ -44,7 +44,7 @@ export default function Home() {
         <div className="relative z-10 max-w-5xl mx-auto px-6 py-28 md:py-32 text-center">
           <div className="mb-5 text-sm tracking-widest uppercase text-muted-foreground">Gogols.ai</div>
           <h1 className="text-4xl md:text-6xl font-semibold leading-tight">
-            Meet your <span className="text-gogol-cyan">Gogol</span>.
+            Meet your <span className="text-gogol-cyan">gogol</span>.
           </h1>
           <p className="mt-5 text-muted-foreground md:text-lg">
             Specialized AI agents — digital souls that learn your world and act on your behalf.
@@ -62,9 +62,9 @@ export default function Home() {
       <section id="train" className="px-6 py-16 md:py-24 border-t border-border">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
           <div>
-            <h2 className="text-3xl md:text-4xl font-semibold">Train a Gogol in minutes</h2>
+            <h2 className="text-3xl md:text-4xl font-semibold">Train a <span className="text-gogol-cyan">gogol</span> in minutes</h2>
             <p className="mt-3 text-muted-foreground">
-              Connect your site or upload docs. Our engine ingests your knowledge and forms an interactive AI soul — your Gogol.
+              Connect your site or upload docs. Our engine ingests your knowledge and forms an interactive AI soul — your gogol.
               Embed it as a chat widget, API, or autonomous agent.
             </p>
             <ul className="mt-6 space-y-2 text-muted-foreground">
