@@ -1,5 +1,6 @@
 // app/page.tsx
 import { Button } from "@/components/ui/button";
+import { ExperienceGogolverse } from "@/components/ExperienceGogolverse";
 
 export default function Home() {
   return (
@@ -84,24 +85,7 @@ export default function Home() {
       </section>
 
       {/* EXPERIENCE */}
-      <section id="experience" className="px-6 py-16 md:py-24 border-t border-border">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-semibold">Experience the Gogolverse</h2>
-          <p className="mt-3 text-muted-foreground">Chat with digital twins, try business gogols, or play the Dilemma game.</p>
-          <div className="mt-8 grid gap-6 md:grid-cols-3">
-            {["Freud Gogol","Business Gogol","Dilemma Gogol"].map((t) => (
-              <div key={t} className="rounded-xl border border-border p-5 bg-gogol-surface/40">
-                <div className="h-36 rounded-md border border-border mb-4 bg-card/60"/>
-                <div className="font-medium">{t}</div>
-                <p className="text-sm text-muted-foreground mt-1">Open a chat demo in a modal.</p>
-                <div className="mt-4">
-                  <Button variant="outline" className="w-full">Try demo</Button>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <ExperienceGogolverse />
 
       {/* SERVICES */}
       <section id="services" className="px-6 py-16 md:py-24 border-t border-border">
