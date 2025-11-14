@@ -5,21 +5,27 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-gogol-bg text-foreground">
 
-      <div className="relative overflow-hidden bg-gogol-bg text-foreground">
-        {/* Corner ornament */}
+      {/* HERO */}
+      <section className="relative overflow-hidden bg-gogol-bg text-foreground">
+        {/* Corner ornaments */}
         <img
           src="/corner-top-right.png"
-          className="pointer-events-none absolute top-0 right-0 w-[380px] md:w-[500px] opacity-90 select-none"
           alt=""
+          className="pointer-events-none absolute top-0 right-0 hidden sm:block w-[130px] md:w-[180px] opacity-50 mix-blend-screen z-0 select-none"
+        />
+        <img
+          src="/corner-bottom-left.png"
+          alt=""
+          className="pointer-events-none absolute bottom-0 left-0 hidden sm:block w-[130px] md:w-[180px] opacity-50 mix-blend-screen z-0 select-none"
         />
 
-      {/* HERO */}
-      <section className="relative px-6 py-28 md:py-36 overflow-hidden">
         {/* Background effects */}
         <div className="pointer-events-none absolute inset-0 bg-gogol-grid opacity-15" />
         <div className="pointer-events-none absolute inset-0 bg-gogol-radial" />
         <div className="pointer-events-none absolute inset-0 bg-gogol-radial-purple" />
-        <div className="max-w-5xl mx-auto text-center relative">
+
+        {/* Hero content */}
+        <div className="relative z-10 max-w-5xl mx-auto px-6 py-28 md:py-32 text-center">
           <div className="mb-5 text-sm tracking-widest uppercase text-muted-foreground">Gogols.ai</div>
           <h1 className="text-4xl md:text-6xl font-semibold leading-tight">
             Meet your <span className="text-gogol-cyan">Gogol</span>.
@@ -104,8 +110,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      </div>
 
     </main>
   );
