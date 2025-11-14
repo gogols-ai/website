@@ -155,31 +155,18 @@
     box-shadow: 0 18px 45px rgba(15, 23, 42, 0.75);
   }
 
-  /* Animated twinkling stars */
-  .stars {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 50%;
-    background: transparent;
-    overflow: hidden;
-    pointer-events: none;
-  }
-
-  .star {
-    position: absolute;
+  /* Pixel-style stars for aesthetic coherence */
+  .pixel-star {
     width: 2px;
     height: 2px;
-    background: white;
-    border-radius: 50%;
-    opacity: 0.7;
-    animation: twinkle 2s infinite ease-in-out;
+    background: rgba(255, 255, 255, 0.9);
+    image-rendering: pixelated;
+    animation: pixel-twinkle 7s infinite steps(2);
   }
 
-  @keyframes twinkle {
-    0%, 100% { opacity: 0.3; transform: scale(1); }
-    50% { opacity: 1; transform: scale(1.4); }
+  @keyframes pixel-twinkle {
+    0%, 100% { opacity: 0.2; }
+    50% { opacity: 1; }
   }
 }
 

@@ -7,16 +7,16 @@ export default function Home() {
 
       {/* HERO */}
       <section className="relative overflow-hidden bg-gogol-bg text-foreground">
-        {/* Animated stars */}
-        <div className="stars z-0">
-          {[...Array(40)].map((_, i) => (
+        {/* Pixel-style stars */}
+        <div className="absolute inset-0 pointer-events-none z-0" style={{ height: '50%' }}>
+          {[...Array(20)].map((_, i) => (
             <div
               key={i}
-              className="star"
+              className="pixel-star absolute"
               style={{
                 top: `${Math.random() * 100}%`,
                 left: `${Math.random() * 100}%`,
-                animationDelay: `${Math.random() * 2}s`,
+                animationDelay: `${Math.random() * 7}s`,
               }}
             />
           ))}
