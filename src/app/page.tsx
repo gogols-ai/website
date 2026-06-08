@@ -1,6 +1,7 @@
 // app/page.tsx
 import { Button } from "@/components/ui/button";
 import { ExperienceGogolverse } from "@/components/ExperienceGogolverse";
+import { BrowseAllDemos } from "@/components/BrowseAllDemos";
 
 export default function Home() {
   return (
@@ -50,9 +51,11 @@ export default function Home() {
             Specialized AI agents — digital souls that learn your world and act on your behalf.
           </p>
           <div className="mt-8 flex items-center justify-center gap-3">
-            <Button className="h-11 px-6 text-base">Train a Gogol</Button>
-            <Button variant="outline" className="h-11 px-6 text-base">
-              Watch demo
+            <Button className="h-11 px-6 text-base" asChild>
+              <a href="#demos">Train a Gogol</a>
+            </Button>
+            <Button variant="outline" className="h-11 px-6 text-base" asChild>
+              <a href="#demos">Watch demo</a>
             </Button>
           </div>
         </div>
@@ -86,6 +89,9 @@ export default function Home() {
 
       {/* EXPERIENCE */}
       <ExperienceGogolverse />
+
+      {/* BROWSE ALL DEMOS */}
+      <BrowseAllDemos />
 
       {/* SERVICES */}
       <section id="services" className="px-6 py-16 md:py-24 border-t border-border">

@@ -10,6 +10,7 @@ const peopleGogols = [
     subtitle: "Psychoanalytic twin",
     description: "Explore dreams, symbols, and subconscious motives.",
     image: "/avatars/freud-gogol.png",
+    href: "/freud/",
   },
   {
     id: "gandhi",
@@ -17,6 +18,7 @@ const peopleGogols = [
     subtitle: "Ethics & non-violence",
     description: "Debate moral dilemmas and peaceful strategies.",
     image: "/avatars/gandhi-gogol.png",
+    href: "/gandhi/",
   },
   {
     id: "zelensky",
@@ -24,27 +26,38 @@ const peopleGogols = [
     subtitle: "Leadership in crisis",
     description: "Discuss communication, courage, and wartime decisions.",
     image: "/avatars/zelensky-gogol.png",
+    href: "/twin-zelensky/",
   },
 ];
 
 const businessGogols = [
   {
-    id: "saas",
-    title: "SaaS Support Gogol",
-    subtitle: "24/7 customer assistant",
-    description: "Trained on your docs, changelogs, and tickets.",
+    id: "leadership-ignition",
+    title: "Leadership Ignition",
+    subtitle: "Leadership development",
+    description: "Session outlines and materials, from half-day to intensives.",
+    href: "/leadership-ignition/",
   },
   {
-    id: "agency",
-    title: "Agency Gogol",
-    subtitle: "Proposal & brief helper",
-    description: "Drafts proposals, briefs, and client emails on command.",
+    id: "shirley-parsons",
+    title: "Shirley Parsons",
+    subtitle: "HSEQ & ESG consulting",
+    description: "Health & Safety, Quality, Sustainability and Business Improvement.",
+    href: "/shirley-parsons/",
   },
   {
-    id: "internal",
-    title: "Internal Wiki Gogol",
-    subtitle: "Knowledge guardian",
-    description: "Answers team questions from your internal wiki.",
+    id: "turner-townsend",
+    title: "Turner & Townsend",
+    subtitle: "Professional services",
+    description: "Cost, project and program management across major sectors.",
+    href: "/turner-townsend/",
+  },
+  {
+    id: "pasha-life",
+    title: "PASHA Life",
+    subtitle: "Insurance knowledge base",
+    description: "Comprehensive insurance products and services.",
+    href: "/pasha-life/",
   },
 ];
 
@@ -161,6 +174,7 @@ type TileItem = {
   subtitle: string;
   description: string;
   image?: string;
+  href?: string;
 };
 
 function Tile({
@@ -219,9 +233,20 @@ function Tile({
           </span>
         </div>
 
-        <Button variant="outline" size="sm" className="border-border">
-          Open demo
-        </Button>
+        {item.href ? (
+          <Button variant="outline" size="sm" className="border-border" asChild>
+            <a href={item.href}>Open demo</a>
+          </Button>
+        ) : (
+          <Button
+            variant="outline"
+            size="sm"
+            className="border-border opacity-60"
+            disabled
+          >
+            Coming soon
+          </Button>
+        )}
       </div>
     </div>
   );
