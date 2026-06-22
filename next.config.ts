@@ -22,6 +22,12 @@ const nextConfig: NextConfig = {
         destination: "https://agents.ethora.com/:path*",
         statusCode: 301,
       },
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "demos.gogols.ai" }],
+        destination: "https://agents.ethora.com/:path*",
+        statusCode: 301,
+      },
     ];
   },
 };
