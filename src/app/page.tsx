@@ -1,5 +1,5 @@
 // app/page.tsx
-import { ExperienceGogolverse } from "@/components/ExperienceGogolverse";
+import { ExperienceAgents } from "@/components/ExperienceAgents";
 import { BrowseAllDemos } from "@/components/BrowseAllDemos";
 
 export default function Home() {
@@ -42,9 +42,9 @@ export default function Home() {
 
         {/* Hero content */}
         <div className="relative z-10 max-w-5xl mx-auto px-6 py-28 md:py-32 text-center">
-          <div className="mb-5 text-sm tracking-widest uppercase text-muted-foreground">Gogols.ai</div>
+          <div className="mb-5 text-sm tracking-widest uppercase text-muted-foreground">Ethora Agents</div>
           <h1 className="text-4xl md:text-6xl font-semibold leading-tight">
-            Meet the <span className="text-gogol-cyan">gogols</span>.
+            Meet your <span className="text-gogol-cyan">agents</span>.
           </h1>
           <p className="mt-5 text-muted-foreground md:text-lg">
             Digital souls, with purpose and agency.
@@ -53,7 +53,7 @@ export default function Home() {
       </section>
 
       {/* EXPERIENCE */}
-      <ExperienceGogolverse />
+      <ExperienceAgents />
 
       {/* BROWSE ALL DEMOS */}
       <BrowseAllDemos />

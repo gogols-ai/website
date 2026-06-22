@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Gogols.ai — Digital Souls for the Post-Human Age",
-  description: "Specialized AI agents — digital souls that learn your world and act on your behalf. Train a gogol, experience the gogolverse, or book professional AI consultancy.",
+  title: "Ethora Agents — Digital Souls with Purpose and Agency",
+  description: "Specialized AI agents and digital twins, built on Ethora. Explore the live demos, then build your own with the Ethora AI SDK.",
 };
 
 export default function RootLayout({

@@ -47,7 +47,7 @@ const businessGogols: Demo[] = [
     title: "Leadership Ignition",
     emoji: "💼",
     description:
-      "AI agent demo based on Leadership Ignition's materials. This business gogol showcases leadership development session outlines and materials, allowing you to explore different session formats from half-day to 1.5-day intensive programs.",
+      "AI agent demo based on Leadership Ignition's materials. This business agent showcases leadership development session outlines and materials, allowing you to explore different session formats from half-day to 1.5-day intensive programs.",
     cta: "View Leadership Ignition",
   },
   {
@@ -55,7 +55,7 @@ const businessGogols: Demo[] = [
     title: "Shirley Parsons",
     emoji: "🏢",
     description:
-      "AI agent demo based on Shirley Parsons case study. This business gogol demonstrates a knowledge base for a global HSEQ, Sustainability & ESG consulting firm, showcasing expertise in Health & Safety, Quality, Sustainability and Business Improvement.",
+      "AI agent demo based on Shirley Parsons case study. This business agent demonstrates a knowledge base for a global HSEQ, Sustainability & ESG consulting firm, showcasing expertise in Health & Safety, Quality, Sustainability and Business Improvement.",
     cta: "View Shirley Parsons",
   },
   {
@@ -63,7 +63,7 @@ const businessGogols: Demo[] = [
     title: "Turner & Townsend",
     emoji: "🏗️",
     description:
-      "AI agent demo based on Turner & Townsend case study. This business gogol showcases a professional services company knowledge base with expertise in cost management, project management, and program management across real estate, infrastructure, and natural resources sectors.",
+      "AI agent demo based on Turner & Townsend case study. This business agent showcases a professional services company knowledge base with expertise in cost management, project management, and program management across real estate, infrastructure, and natural resources sectors.",
     cta: "View Turner & Townsend",
   },
   {
@@ -71,7 +71,7 @@ const businessGogols: Demo[] = [
     title: "PASHA Life",
     emoji: "🛡️",
     description:
-      "AI agent demo based on PASHA Life case study. This business gogol demonstrates an insurance company knowledge base providing information about comprehensive insurance products and services.",
+      "AI agent demo based on PASHA Life case study. This business agent demonstrates an insurance company knowledge base providing information about comprehensive insurance products and services.",
     cta: "View PASHA Life",
   },
   {
@@ -79,7 +79,7 @@ const businessGogols: Demo[] = [
     title: "Preshent",
     emoji: "🌱",
     description:
-      "AI agent demo based on Preshent case study. This business gogol showcases a knowledge base for an intelligent, compliance-driven OS for a sustainable ecosystem, covering AI, blockchain, and digital assets across energy, agriculture, finance, health, and government services.",
+      "AI agent demo based on Preshent case study. This business agent showcases a knowledge base for an intelligent, compliance-driven OS for a sustainable ecosystem, covering AI, blockchain, and digital assets across energy, agriculture, finance, health, and government services.",
     cta: "Coming soon",
     comingSoon: true,
   },
@@ -150,7 +150,7 @@ export function BrowseAllDemos() {
       <div className="mx-auto max-w-5xl">
         <h2 className="text-3xl md:text-4xl font-semibold">Browse all demos</h2>
         <p className="mt-3 max-w-3xl text-muted-foreground">
-          Discover gogols demos divided by sections. Each project showcases
+          Discover agent demos divided by sections. Each project showcases
           different aspects of knowledge-based AI, be it digital twins, business
           applications or games and imaginary worlds.
         </p>
@@ -165,9 +165,9 @@ export function BrowseAllDemos() {
           </div>
         </div>
 
-        {/* Business Gogols */}
+        {/* Business Agents */}
         <div className="mt-16">
-          <SectionTitle first="Business" accent="Gogols" />
+          <SectionTitle first="Business" accent="Agents" />
           <div className="mt-6 space-y-5">
             {businessGogols.map((d) => (
               <DemoPanel key={d.slug} demo={d} />

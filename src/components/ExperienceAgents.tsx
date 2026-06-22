@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 const peopleGogols = [
   {
     id: "freud",
-    title: "Freud Gogol",
+    title: "Freud Agent",
     subtitle: "Psychoanalytic twin",
     description: "Explore dreams, symbols, and subconscious motives.",
     image: "/avatars/freud-gogol.png",
@@ -14,7 +14,7 @@ const peopleGogols = [
   },
   {
     id: "gandhi",
-    title: "Gandhi Gogol",
+    title: "Gandhi Agent",
     subtitle: "Ethics & non-violence",
     description: "Debate moral dilemmas and peaceful strategies.",
     image: "/avatars/gandhi-gogol.png",
@@ -22,7 +22,7 @@ const peopleGogols = [
   },
   {
     id: "zelensky",
-    title: "Zelensky Gogol",
+    title: "Zelensky Agent",
     subtitle: "Leadership in crisis",
     description: "Discuss communication, courage, and wartime decisions.",
     image: "/avatars/zelensky-gogol.png",
@@ -64,25 +64,25 @@ const businessGogols = [
 const funGogols = [
   {
     id: "dilemma",
-    title: "Dilemma Gogol",
+    title: "Dilemma Agent",
     subtitle: "Prisoner's Dilemma host",
-    description: "Join a room and play repeated Dilemma with other gogols.",
+    description: "Join a room and play repeated Dilemma with other agents.",
   },
   {
     id: "storyteller",
-    title: "Storyteller Gogol",
+    title: "Storyteller Agent",
     subtitle: "Folk horror tales",
-    description: "Spins eerie, Gogol-inspired stories in group chats.",
+    description: "Spins eerie, folk-tale-inspired stories in group chats.",
   },
   {
     id: "quiz",
-    title: "Quizmaster Gogol",
+    title: "Quizmaster Agent",
     subtitle: "Game night host",
     description: "Runs trivia, hidden roles, and experimental games.",
   },
 ];
 
-export function ExperienceGogolverse() {
+export function ExperienceAgents() {
   const [personIdx, setPersonIdx] = useState(0);
   const [businessIdx, setBusinessIdx] = useState(0);
   const [funIdx, setFunIdx] = useState(0);
@@ -116,10 +116,10 @@ export function ExperienceGogolverse() {
     <section id="experience" className="px-6 py-16 md:py-24 border-t border-border">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-semibold">
-          Experience the Gogolverse
+          Experience the agents
         </h2>
         <p className="mt-3 text-muted-foreground">
-          Chat with digital twins, try business gogols, or play the Dilemma game.
+          Chat with digital twins, try business agents, or play the Dilemma game.
         </p>
 
         <div className="mt-8 grid gap-6 md:grid-cols-3">
@@ -137,9 +137,9 @@ export function ExperienceGogolverse() {
             }
           />
 
-          {/* Business gogols tile */}
+          {/* Business agents tile */}
           <Tile
-            label="Business Gogols"
+            label="Business Agents"
             item={business}
             onNext={() =>
               setBusinessIdx((i) => (i + 1) % businessGogols.length)
@@ -229,7 +229,7 @@ function Tile({
             ▶
           </button>
           <span className="ml-1 text-[0.7rem] uppercase tracking-[0.18em]">
-            Cycle gogols
+            Cycle agents
           </span>
         </div>
 
